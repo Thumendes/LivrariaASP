@@ -20,7 +20,7 @@ namespace LivrariaASP.BLL
 
         public void create(LivroDTO data)
         {
-            string query = string.Format($@"INSERT INTO TBL_Livro VALUES(NULL, {data.IdAutor}, {data.IdEditora}, {data.Titulo}, {data.DataCadastro}, {data.NumPaginas}, {data.Valor});");
+            string query = string.Format($@"INSERT INTO TBL_Livro VALUES(NULL, '{data.IdAutor}', '{data.IdEditora}', '{data.Titulo}', '{data.DataCadastro.ToString("yyyy-MM-dd")}', '{data.NumPaginas}', '{data.Valor}');");
             database.execCommand(query);
         }
 
@@ -32,7 +32,7 @@ namespace LivrariaASP.BLL
 
         public void update(LivroDTO data)
         {
-            string query = string.Format($@"UPDATE TBL_Livro SET idAutor = {data.IdAutor}, idEditora = {data.IdEditora}, titulo = '{data.Titulo}', dataCadastro = '{data.DataCadastro}', numPaginas = {data.NumPaginas}, valor = {data.Valor} WHERE id = {data.IdLivro};");
+            string query = string.Format($@"UPDATE TBL_Livro SET idAutor = '{data.IdAutor}', idEditora = '{data.IdEditora}', titulo = '{data.Titulo}', dataCadastro = '{data.DataCadastro.ToString("yyyy-MM-dd")}', numPaginas = '{data.NumPaginas}', valor = '{data.Valor}' WHERE idLivro = '{data.IdLivro}';");
             database.execCommand(query);
         }
     }

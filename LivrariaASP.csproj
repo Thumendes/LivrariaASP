@@ -69,6 +69,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="CSS\global.css" />
+    <Content Include="UI\500.html" />
     <Content Include="UI\FormAutor.aspx" />
     <Content Include="UI\FormEditora.aspx" />
     <Content Include="UI\FormLivro.aspx" />

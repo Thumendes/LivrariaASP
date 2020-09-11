@@ -9,7 +9,8 @@ namespace LivrariaASP.DTO
     {
         private int idLivro, idAutor, idEditora, numPaginas;
         private double valor;
-        private string titulo, dataCadastro;
+        private string titulo;
+        private DateTime dataCadastro;
 
         public int IdLivro { get => idLivro; set => idLivro = value; }
         public int IdAutor { get => idAutor; set {
@@ -44,9 +45,9 @@ namespace LivrariaASP.DTO
                 }
             }
         }
-        public string DataCadastro { get => dataCadastro; set
+        public DateTime DataCadastro { get => dataCadastro; set
             {
-                if (value.ToString() != string.Empty)
+                if (value != null)
                 {
                     this.dataCadastro = value;
                 }

@@ -11,7 +11,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>Formulário Editora</h1>
+        <h1>Formulário Livro</h1>
         <div class="error">
             <asp:Label ID="messageError" runat="server" Visible="false" />
         </div>
@@ -46,7 +46,17 @@
             <div class="input-group">
                 <asp:Button ID="btnSalvar" runat="server" Text="Salvar" OnClick="btnSalvar_Click" />
             </div>
+            <asp:GridView ID="GridLivro" CssClass="table" runat="server" OnRowDeleting="GridLivro_RowDeleting" CellPadding="4" ForeColor="#333333" GridLines="None" OnRowCancelingEdit="GridLivro_RowCancelingEdit" OnRowEditing="GridLivro_RowEditing" OnRowUpdating="GridLivro_RowUpdating">
+                <AlternatingRowStyle BackColor="White" />
+                <Columns>
+                    <asp:CommandField />
+                    <asp:CommandField ShowEditButton="True" />
+                    <asp:CommandField ShowDeleteButton="True" />
+                </Columns>
+
+            </asp:GridView>
         </form>
     </div>
+
 </body>
 </html>

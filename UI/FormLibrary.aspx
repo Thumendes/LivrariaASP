@@ -27,7 +27,7 @@
             </div>
             <div class="input-group">
                 <asp:Button ID="btnSalvar" runat="server" Text="Salvar" />
-            </div>
+            </div>\
         </form>
     </div>
 </body>

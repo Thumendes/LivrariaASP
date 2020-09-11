@@ -16,7 +16,7 @@ namespace LivrariaASP.UI
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            this.PopulateGrid();
         }
         public void reset()
         {
@@ -45,6 +45,12 @@ namespace LivrariaASP.UI
                 messageError.Visible = true;
                 messageError.Text = error.Message;
             }
+        }
+
+        public void PopulateGrid()
+        {
+            GridAutor.DataSource = autorBLL.index();
+            GridAutor.DataBind();
         }
     }
 }

@@ -11,6 +11,7 @@
 </head>
 <body>
     <div class="container">
+        <form id="form1" runat="server">
         <h1>Formulário Autor</h1>
         <div class="error">
             <asp:Label ID="messageError" runat="server" Visible="false" />
@@ -18,7 +19,6 @@
         <div class="success">
             <asp:Label ID="messageSuccess" runat="server" Visible="false" />
         </div>
-        <form id="form1" runat="server">
             <div class="input-group">
                 <asp:Label runat="server" Text="Nome" />
                 <asp:TextBox ID="txtNome" runat="server" />
@@ -30,6 +30,9 @@
             <div class="input-group">
                 <asp:Button ID="btnSalvar" runat="server" Text="Salvar" OnClick="btnSalvar_Click" />
             </div>
+        <asp:GridView ID="GridAutor" runat="server">
+
+        </asp:GridView>
         </form>
     </div>
 </body>
